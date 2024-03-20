@@ -45,7 +45,9 @@ export default function Navbar() {
                         </Avatar>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
-                        <DropdownMenuItem>Sign up</DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <Link href="/signin">Sign up</Link>
+                        </DropdownMenuItem>
                         <DropdownMenuItem>Log in</DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
