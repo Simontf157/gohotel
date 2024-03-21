@@ -46,9 +46,11 @@ export default function Navbar() {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
                         <DropdownMenuItem>
-                            <Link href="/signin">Sign up</Link>
+                            <Link href="/signup">Sign up</Link>
                         </DropdownMenuItem>
-                        <DropdownMenuItem>Log in</DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <Link href="/login">Log in</Link>
+                        </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>

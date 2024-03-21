@@ -13,7 +13,7 @@ interface FormData {
     confirmPassword: string;
 }
 
-export default function SignupForm() {
+export default function SignupForm({ formSubmit }: any) {
     const [formData, setFormData] = useState<FormData>({
         firstname: "",
         lastname: "",
@@ -52,14 +52,19 @@ export default function SignupForm() {
             });
             return;
         }
-        console.log(formData);
+
+        //Add the call to the database to send accont data
+        formSubmit(formData);
     };
 
     return (
-        <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input border-secondary border-2">
+        <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input border-dark-secondary border-2 bg-secondary dark:bg-background">
             <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
                 Welcome to GoHotel
             </h2>
+            <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
+                Make an account to make and keep track of your bookings!
+            </p>
 
             <form className="my-8" onSubmit={handleSubmit}>
                 <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
@@ -105,7 +110,7 @@ export default function SignupForm() {
                     <Input
                         name="confirmPassword"
                         placeholder="••••••••"
-                        type="confirmPassword"
+                        type="password"
                         onChange={handleChange}
                     />
                 </LabelInputContainer>
