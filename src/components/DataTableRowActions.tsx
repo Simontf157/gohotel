@@ -28,4 +28,5 @@ const DataTableRowActions = <TData, >({row, onDelete}: DataTableRowActionsProps<
     );
 };
 
+
 export default DataTableRowActions;
